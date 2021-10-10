@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style2.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Password Generator</h1>
+            </header>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Generate a Password</h2>
+                </div>
+                <div class="card-body">
+                    <textarea
+                              readonly
+                              id="password"
+                              placeholder="Your Secure Password"
+                              aria-label="Generated Password"
+                              ></textarea>
+                </div>
+                <div class="card-footer">
+                    <button id="generate" class="btn" onclick="test2()">Generate Password</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form id="form">
+                <label for="quantity">Number of characters (between 8 and 128):</label>
+                <input type="number" id="quantity" name="quantity" min="8" max="128"><br>
+                <p>Password doesn't include:</p>
+                <input type="checkbox" id="uppercase" name="uppercase" value="no-upper">
+                <label for="uppercase">Uppercase characters</label><br>
+                <input type="checkbox" id="lowercase" name="lowercase" value="no-lower">
+                <label for="lowercase">Lowercase characters</label><br>
+                <input type="checkbox" id="numbers" name="numbers" value="no-numbers">
+                <label for="numbers">Numeric characters</label><br>
+                <input type="checkbox" id="special-characters" name="special-characters" value="no-special">
+                <label for="special-characters">Special characters</label><br><br>
+                <input type="button" onclick="test()" id="submit" value="SUBMIT">   
+            </form> 
+        </div>
+        <script src="script2.js"></script>
+    </body>
+</html>
